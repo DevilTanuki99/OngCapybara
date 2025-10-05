@@ -10,7 +10,7 @@
 <body class="bg-black text-gray-200 font-sans">
 
   <!-- NAVIGATION -->
-  <nav class="flex justify-center gap-6 p-4 border-b-2 border-cyan-400 bg-gray-900">
+  <nav>
     <a href="index.html" class="hover:text-cyan-400">About Me</a>
     <a href="project.html" class="hover:text-cyan-400">Projects</a>
     <a href="journey.html" class="hover:text-cyan-400">Journey</a>
@@ -32,6 +32,7 @@
         <button class="category-btn px-4 py-2 bg-cyan-500 text-black rounded hover:bg-cyan-400 transition" data-category="all">All</button>
         <button class="category-btn px-4 py-2 bg-gray-800 text-cyan-300 rounded hover:bg-gray-700 transition" data-category="ctf">CTF</button>
         <button class="category-btn px-4 py-2 bg-gray-800 text-cyan-300 rounded hover:bg-gray-700 transition" data-category="cyber">Cyber Security</button>
+        <button class="category-btn px-4 py-2 bg-gray-800 text-cyan-300 rounded hover:bg-gray-700 transition" data-category="journey">Journey</button>
         <button class="category-btn px-4 py-2 bg-gray-800 text-cyan-300 rounded hover:bg-gray-700 transition" data-category="Robotics">Robotics</button>
         <button class="category-btn px-4 py-2 bg-gray-800 text-cyan-300 rounded hover:bg-gray-700 transition" data-category="tips">Tips</button>
       </div>
@@ -44,10 +45,22 @@
     <!-- BLOG GRID -->
     <div id="blogs" class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       
+      <article class="project-item journey bg-gray-900 p-6 rounded-xl border border-cyan-500 hover:shadow-cyan-400/40 hover:scale-[1.02] transition">
+        <div class="flex justify-between items-center mb-3">
+          <span class="text-sm text-cyan-400 font-semibold">Journey</span>
+          <span class="text-gray-500 text-sm">22 Agu 2025</span>
+        </div>
+        <h3 class="text-xl font-semibold text-cyan-300 mb-2">CTF Pesawaran 2025</h3>
+        <p class="text-gray-400 text-sm mb-4">
+          Perjalanan tanpa henti hingga mencapai puncak tertinggi.
+        </p>
+        <a href="blogs/cerita_1.html" class="inline-block text-cyan-400 hover:text-cyan-300 font-medium">Baca selengkapnya →</a>
+      </article>
+
       <article class="project-item tips bg-gray-900 p-6 rounded-xl border border-cyan-500 hover:shadow-cyan-400/40 hover:scale-[1.02] transition">
         <div class="flex justify-between items-center mb-3">
           <span class="text-sm text-cyan-400 font-semibold">Tips</span>
-          <span class="text-gray-500 text-sm">10 Okt 2025</span>
+          <span class="text-gray-500 text-sm">22 Agu 2025</span>
         </div>
         <h3 class="text-xl font-semibold text-cyan-300 mb-2">Tips & Cheat-sheet Linux Command</h3>
         <p class="text-gray-400 text-sm mb-4">
@@ -71,7 +84,7 @@
       <article class="project-item tips bg-gray-900 p-6 rounded-xl border border-cyan-500 hover:shadow-cyan-400/40 hover:scale-[1.02] transition">
         <div class="flex justify-between items-center mb-3">
           <span class="text-sm text-cyan-400 font-semibold">Tips</span>
-          <span class="text-gray-500 text-sm">09 Okt 2025</span>
+          <span class="text-gray-500 text-sm">09 Oct 2025</span>
         </div>
         <h3 class="text-xl font-semibold text-cyan-300 mb-2">Basic Command of Linux</h3>
         <p class="text-gray-400 text-sm mb-4">
@@ -84,7 +97,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="text-center p-4 border-t-2 border-cyan-400 bg-gray-900">
+  <footer>
     <p>&copy; 2025 - OngCapybara</p>
   </footer>
 
@@ -92,4 +105,3 @@
   <script src="src/script/script-blog.js"></script>
 </body>
 </html>
-
