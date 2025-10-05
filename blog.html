@@ -3,53 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OngCapybara</title>
-  <link rel="stylesheet" href="src/styles/styles.css">
+  <title>OngCapybara - Blog</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="src/styles/styles.css">
 </head>
 <body class="bg-black text-gray-200 font-sans">
-  <nav>
+
+  <!-- NAVIGATION -->
+  <nav class="flex justify-center gap-6 p-4 border-b-2 border-cyan-400 bg-gray-900">
     <a href="index.html" class="hover:text-cyan-400">About Me</a>
     <a href="project.html" class="hover:text-cyan-400">Projects</a>
     <a href="journey.html" class="hover:text-cyan-400">Journey</a>
-    <a href="blog.html" class="hover:text-cyan-400">Blog</a>
+    <a href="blog.html" class="text-cyan-400 font-semibold">Blog</a>
     <a href="contact.html" class="hover:text-cyan-400">Contact</a>
   </nav>
 
+  <!-- HEADER -->
   <header class="text-center p-8 border-b-2 border-cyan-400">
-    <h1 class="text-3xl font-bold">Ong's Blog</h1>
-    <p class="text-gray-400 mt-2">Articles on CTF, cybersecurity, and hacking tips are coming soon!</p>
+    <h1 class="text-3xl font-bold">My Blog</h1>
+    <p class="text-cyan-400 mt-2">Explore my articles about cybersecurity, CTF, Robotics, and coding</p>
   </header>
 
-  <main class="max-w-4xl mx-auto p-8">
-    <section class="text-center mt-20">
-      <div class="inline-block bg-gray-800 p-12 rounded-xl shadow-lg border-2 border-cyan-400">
-        <h2 class="text-3xl font-bold text-cyan-400 mb-4">🚧 Coming Soon 🚧</h2>
-        <p class="text-gray-400 text-lg">The blog page is currently under development. Stay tuned for the latest updates on CTF write-ups, cybersecurity tips, and other exciting projects!</p>
+  <!-- FILTER / SEARCH -->
+  <main class="max-w-5xl mx-auto p-6">
+    <div class="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
+      <!-- Category Buttons -->
+      <div class="flex flex-wrap gap-2" id="categoryButtons">
+        <button class="category-btn px-4 py-2 bg-cyan-500 text-black rounded hover:bg-cyan-400 transition" data-category="all">All</button>
+        <button class="category-btn px-4 py-2 bg-gray-800 text-cyan-300 rounded hover:bg-gray-700 transition" data-category="ctf">CTF</button>
+        <button class="category-btn px-4 py-2 bg-gray-800 text-cyan-300 rounded hover:bg-gray-700 transition" data-category="cyber">Cyber Security</button>
+        <button class="category-btn px-4 py-2 bg-gray-800 text-cyan-300 rounded hover:bg-gray-700 transition" data-category="Robotics">Robotics</button>
+        <button class="category-btn px-4 py-2 bg-gray-800 text-cyan-300 rounded hover:bg-gray-700 transition" data-category="tips">Tips</button>
       </div>
-    </section>
 
-    <!-- Placeholder artikel (boleh dihapus kalau mau bersih) -->
-    <!-- <section class="mt-16 space-y-6">
-      <article class="p-6 border border-cyan-400 rounded-xl hover:shadow-lg hover:border-cyan-300 transition">
-        <h3 class="text-2xl font-semibold text-cyan-400">[Placeholder] Write-up CTF #1</h3>
-        <p class="text-gray-400">Coming soon...</p>
-        <a href="#" class="text-cyan-300 hover:text-cyan-400">Baca selengkapnya</a>
+      <!-- Search Box -->
+      <input type="text" id="searchBox" placeholder="Search articles..."
+             class="p-2 rounded bg-gray-800 text-gray-200 w-full sm:w-64">
+    </div>
+
+    <!-- BLOG GRID -->
+    <div id="blogs" class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <article class="project-item tips bg-gray-900 p-6 rounded-xl border border-cyan-500 hover:shadow-cyan-400/40 hover:scale-[1.02] transition">
+        <div class="flex justify-between items-center mb-3">
+          <span class="text-sm text-cyan-400 font-semibold">Tips</span>
+          <span class="text-gray-500 text-sm">22 Agu 2025</span>
+        </div>
+        <h3 class="text-xl font-semibold text-cyan-300 mb-2">Tips & Cheat-sheet Linux Command</h3>
+        <p class="text-gray-400 text-sm mb-4">
+          Tips seru menggunakan terminal.
+        </p>
+        <a href="blogs/command_praktiks_linux.html" class="inline-block text-cyan-400 hover:text-cyan-300 font-medium">Baca selengkapnya →</a>
       </article>
 
-      <article class="p-6 border border-cyan-400 rounded-xl hover:shadow-lg hover:border-cyan-300 transition">
-        <h3 class="text-2xl font-semibold text-cyan-400">[Placeholder] Write-up CTF #2</h3>
-        <p class="text-gray-400">Coming soon...</p>
-        <a href="#" class="text-cyan-300 hover:text-cyan-400">Baca selengkapnya</a>
+      <article class="project-item cyber bg-gray-900 p-6 rounded-xl border border-cyan-500 hover:shadow-cyan-400/40 hover:scale-[1.02] transition">
+        <div class="flex justify-between items-center mb-3">
+          <span class="text-sm text-cyan-400 font-semibold">Cyber Security</span>
+          <span class="text-gray-500 text-sm">02 Okt 2025</span>
+        </div>
+        <h3 class="text-xl font-semibold text-cyan-300 mb-2">Basic SQL Injection</h3>
+        <p class="text-gray-400 text-sm mb-4">
+          Edukasi tentang dasar dari query SQL Injection
+        </p>
+        <a href="blogs/sql_inject_dasar.html" class="inline-block text-cyan-400 hover:text-cyan-300 font-medium">Baca selengkapnya →</a>
       </article>
-    </section> -->
+      
+      <article class="project-item tips bg-gray-900 p-6 rounded-xl border border-cyan-500 hover:shadow-cyan-400/40 hover:scale-[1.02] transition">
+        <div class="flex justify-between items-center mb-3">
+          <span class="text-sm text-cyan-400 font-semibold">Tips</span>
+          <span class="text-gray-500 text-sm">22 Agu 2025</span>
+        </div>
+        <h3 class="text-xl font-semibold text-cyan-300 mb-2">Basic Command of Linux</h3>
+        <p class="text-gray-400 text-sm mb-4">
+          Basic of linux terminal
+        </p>
+        <a href="blogs/command_dasar_linux.html" class="inline-block text-cyan-400 hover:text-cyan-300 font-medium">Baca selengkapnya →</a>
+      </article>
+
+    </div>
   </main>
 
-  <footer class="text-center p-6 border-t-2 border-cyan-400 bg-gray-900 mt-12">
+  <!-- FOOTER -->
+  <footer class="text-center p-4 border-t-2 border-cyan-400 bg-gray-900">
     <p>&copy; 2025 - OngCapybara</p>
   </footer>
 
+  <!-- SCRIPT -->
+  <script src="src/script/script-blog.js"></script>
 </body>
 </html>
-
-
